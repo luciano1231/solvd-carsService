@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.solvd.mavenUberCarService.myBatis.dao.ILocationDAO">
+	<resultMap id="LocationResultMap" type="Location"
+		autoMapping="false">
+		<id property="id" column="id" />
+		<result property="city" column="city" />
+		<result property="street" column="street" />		
+		<result property="streetNumber" column="streetNumber" />
+	</resultMap>
+
+
+	<sql id="getTemplate">
+		<![CDATA[
+			SELECT * FROM Locations
+		]]>
+	</sql>
+
+	<select id="get" resultMap="LocationResultMap">
+		<include refid="getTemplate" />
+        <![CDATA[
+            SELECT * FROM Locations WHERE id = #{id}
+        ]]>
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        	INSERT INTO Locations (city,street, streetNumber)
+       		VALUES (
+       			#{city},
+       			#{street},       			 
+       			#{streetNumber}       			
+       		)
+        ]]>
+	</insert>
+
+	<update id="update">
+        <![CDATA[
+            UPDATE Locations
+            SET street = #{street} WHERE id = #{id}
+        ]]>
+	</update>
+	
+	<delete id="delete" parameterType="Location">
+		<![CDATA[
+			DELETE FROM Locations
+			WHERE id = #{id}
+		]]>
+	</delete>
+
+</mapper>

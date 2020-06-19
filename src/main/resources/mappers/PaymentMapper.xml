@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.solvd.mavenUberCarService.myBatis.dao.IPaymentDAO">
+	<resultMap id="PaymentResultMap" type="Payment" autoMapping="false">
+		<id property="id" column="id" />
+		<result property="payMethod" column="payMethod" />
+		<result property="amount" column="amount" />
+	</resultMap>
+
+	<sql id="getTemplate">
+		<![CDATA[
+			SELECT * FROM Payments
+		]]>
+	</sql>
+
+	<select id="get" resultMap="PaymentResultMap">
+		<include refid="getTemplate" />
+        <![CDATA[
+            SELECT * FROM Payments WHERE id = #{id}
+        ]]>
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        	INSERT INTO Payments (payMethod, amount)
+       		VALUES (
+       			#{payMethod},       			
+       			#{amount}       			
+       		)
+        ]]>
+	</insert>
+
+	<update id="update">
+        <![CDATA[
+            UPDATE Payments
+            SET amount = #{amount} WHERE id = #{id}
+        ]]>
+	</update>
+
+	<delete id="delete" parameterType="Payment">
+		<![CDATA[
+			DELETE FROM Payments
+			WHERE id = #{id}
+		]]>
+	</delete>
+</mapper>

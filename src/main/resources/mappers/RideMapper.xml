@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.solvd.mavenUberCarService.myBatis.dao.IRideDAO">
+	<resultMap id="RideResultMap" type="Ride" autoMapping="false">
+		<id property="id" column="id" />
+		<result property="origin" column="origin" />
+		<result property="destination" column="destination" />
+		<result property="distance" column="distance" />
+		<result property="amount" column="amount" />
+	</resultMap>
+
+	<sql id="getTemplate">
+		<![CDATA[
+			SELECT * FROM Rides
+		]]>
+	</sql>
+
+	<select id="get" resultMap="RideResultMap">
+		<include refid="getTemplate" />
+        <![CDATA[
+            SELECT * FROM Rides WHERE id = #{id}
+        ]]>
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        	INSERT INTO Rides (origin, destination, distance, amount)
+       		VALUES (
+       			#{origin},
+       			#{destination}, 
+       			#{distance}, 
+       			#{amount}       			
+       		)
+        ]]>
+	</insert>
+
+	<update id="update">
+        <![CDATA[
+            UPDATE Rides
+            SET amount = #{amount} WHERE id = #{id}
+        ]]>
+	</update>
+
+	<delete id="delete" parameterType="Ride">
+		<![CDATA[
+			DELETE FROM Rides
+			WHERE id = #{id}
+		]]>
+	</delete>
+</mapper>

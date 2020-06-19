@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.solvd.mavenUberCarService.myBatis.dao.IUserDAO">
+	<resultMap id="UserMap" type="User" autoMapping="false">
+		<id property="id" column="id" />
+		<result property="userName" column="userName" />
+		<result property="userEmail" column="userEmail" />
+		<result property="userContact" column="userContact" />
+	</resultMap>
+
+	<sql id="getTemplate">
+		<![CDATA[
+			SELECT * FROM Users
+		]]>
+	</sql>
+
+	<select id="get" resultMap="UserResultMap">
+		<include refid="getTemplate" />
+        <![CDATA[
+            SELECT * FROM Users WHERE id = #{id}
+        ]]>
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        <![CDATA[
+        	INSERT INTO Users (userName, userEmail, userContact)
+       		VALUES (
+       			#{userName},
+       			#{userEmail}, 
+       			#{userContact}  			
+       		)
+        ]]>
+	</insert>
+
+	<update id="update">
+        <![CDATA[
+            UPDATE Users
+            SET userName = #{userName} WHERE id = #{id}
+        ]]>
+	</update>
+
+	<delete id="delete" parameterType="User">
+		<![CDATA[
+			DELETE FROM Users
+			WHERE id = #{id}
+		]]>
+	</delete>
+</mapper>

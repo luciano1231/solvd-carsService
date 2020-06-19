@@ -1,0 +1,10 @@
+2020-06-16 20:37:57,875 DEBUG c.s.c.App [main] ddd
+2020-06-16 20:37:57,878 INFO c.s.c.App [main] ddd
+2020-06-16 20:37:57,879 FATAL c.s.c.App [main] ddd
+2020-06-16 20:37:57,879 WARN c.s.c.App [main] ddd
+2020-06-16 20:37:57,879 DEBUG c.s.c.App [main] ddd
+2020-06-16 21:15:01,387 DEBUG c.s.c.t.Loggertest [main] ddd
+2020-06-16 21:15:01,389 INFO c.s.c.t.Loggertest [main] ddd
+2020-06-16 21:15:01,390 FATAL c.s.c.t.Loggertest [main] ddd
+2020-06-16 21:15:01,390 WARN c.s.c.t.Loggertest [main] ddd
+2020-06-16 21:15:01,390 DEBUG c.s.c.t.Loggertest [main] ddd
