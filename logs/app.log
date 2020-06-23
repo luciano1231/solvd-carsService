@@ -1,10 +1,98 @@
-2020-06-16 20:37:57,875 DEBUG c.s.c.App [main] ddd
-2020-06-16 20:37:57,878 INFO c.s.c.App [main] ddd
-2020-06-16 20:37:57,879 FATAL c.s.c.App [main] ddd
-2020-06-16 20:37:57,879 WARN c.s.c.App [main] ddd
-2020-06-16 20:37:57,879 DEBUG c.s.c.App [main] ddd
-2020-06-16 21:15:01,387 DEBUG c.s.c.t.Loggertest [main] ddd
-2020-06-16 21:15:01,389 INFO c.s.c.t.Loggertest [main] ddd
-2020-06-16 21:15:01,390 FATAL c.s.c.t.Loggertest [main] ddd
-2020-06-16 21:15:01,390 WARN c.s.c.t.Loggertest [main] ddd
-2020-06-16 21:15:01,390 DEBUG c.s.c.t.Loggertest [main] ddd
+2020-06-23 01:00:17,357 INFO c.s.c.l.Runner [main] Original List: [Diego,Luciano,Ana,Laura,Cristian,Blair,Delia,Juan,Fabian,Jesica]
+2020-06-23 01:00:17,380 INFO c.s.c.l.Runner [main] Reversed list: [Jesica,Fabian,Juan,Delia,Blair,Cristian,Laura,Ana,Luciano,Diego]
+2020-06-23 01:42:49,429 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 01:42:49,443 INFO c.s.c.c.Ride [main] Date: 2020-07-03 01:42:49
+2020-06-23 01:42:49,469 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 01:42:49,469 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 01:42:49,470 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 01:42:52,139 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 01:42:59,331 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 01:43:01,475 DEBUG c.s.c.c.Client [main]  --- Enter contact number ---
+2020-06-23 01:43:11,934 DEBUG c.s.c.c.Driver [main] Creating drivers
+2020-06-23 01:43:11,934 DEBUG c.s.c.c.Driver [main] Lots of Drivers added
+2020-06-23 01:43:11,935 DEBUG c.s.c.c.Client [main]  --- Enter your home location with number ---
+2020-06-23 01:43:30,807 INFO c.s.c.c.Ride [main]  --- Enter your destination with numbers ---
+2020-06-23 01:43:33,840 INFO c.s.c.c.Ride [main] - The mount is: $90
+2020-06-23 01:43:33,840 INFO c.s.c.c.Ride [main] - The mount is: $80
+2020-06-23 01:43:33,840 INFO c.s.c.c.Ride [main] 
+ How do you wanna use Credit or Debit? use C or D
+
+2020-06-23 01:43:43,399 INFO c.s.c.c.Ride [main] The Mount is: 104.0
+2020-06-23 01:48:20,185 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 01:48:20,189 INFO c.s.c.c.Ride [main] Date: 2020-07-03 01:48:20
+2020-06-23 01:48:20,200 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 01:48:20,201 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 01:48:20,201 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 01:48:22,903 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 01:48:27,416 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 01:48:31,422 DEBUG c.s.c.c.Client [main]  --- Enter contact number ---
+2020-06-23 01:48:32,680 INFO c.s.c.c.Ride [main]  --- RideStatus: Taxi available ---
+2020-06-23 01:48:32,682 DEBUG c.s.c.c.Driver [main] Creating drivers
+2020-06-23 01:48:32,682 DEBUG c.s.c.c.Driver [main] Lots of Drivers added
+2020-06-23 01:48:32,682 DEBUG c.s.c.c.Client [main]  --- Enter your home location with number ---
+2020-06-23 02:11:41,299 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 02:11:41,303 INFO c.s.c.c.Ride [main] Date: 2020-07-03 02:11:41
+2020-06-23 02:11:41,314 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 02:11:41,315 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 02:11:41,315 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 02:11:43,961 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 02:11:46,529 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 02:12:04,034 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 02:12:04,038 INFO c.s.c.c.Ride [main] Date: 2020-07-03 02:12:04
+2020-06-23 02:12:04,049 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 02:12:04,049 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 02:12:04,049 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 02:12:05,998 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 02:12:06,597 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 02:12:08,260 DEBUG c.s.c.c.Client [main]  --- Enter contact number ---
+2020-06-23 02:12:12,358 INFO c.s.c.c.Ride [main]  --- RideStatus: Taxi available ---
+2020-06-23 02:12:12,359 DEBUG c.s.c.c.Driver [main] Creating drivers
+2020-06-23 02:12:12,360 DEBUG c.s.c.c.Driver [main] Lots of Drivers added
+2020-06-23 02:12:12,361 DEBUG c.s.c.c.Client [main]  --- Enter your home location with number ---
+2020-06-23 02:12:23,348 INFO c.s.c.c.Ride [main]  --- Enter your destination with numbers ---
+2020-06-23 02:12:28,242 INFO c.s.c.c.Ride [main] - The mount is: $330
+2020-06-23 02:12:28,242 INFO c.s.c.c.Ride [main] - The mount is: $308
+2020-06-23 02:12:28,243 INFO c.s.c.c.Ride [main] 
+ How do you wanna use Credit or Debit? use C or D
+
+2020-06-23 02:12:42,707 INFO c.s.c.c.Ride [main] The Mount is: 400.40000000000003
+2020-06-23 02:15:55,691 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 02:15:55,695 INFO c.s.c.c.Ride [main] Date: 2020-07-03 02:15:55
+2020-06-23 02:15:55,706 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 02:15:55,706 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 02:15:55,707 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 02:15:57,973 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 02:15:58,677 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 02:15:59,805 DEBUG c.s.c.c.Client [main]  --- Enter contact number ---
+2020-06-23 02:16:01,270 INFO c.s.c.c.Ride [main]  --- RideStatus: Taxi available ---
+2020-06-23 02:16:01,271 DEBUG c.s.c.c.Driver [main] Creating drivers
+2020-06-23 02:16:01,271 DEBUG c.s.c.c.Driver [main] Lots of Drivers added
+2020-06-23 02:16:01,272 DEBUG c.s.c.c.Client [main]  --- Enter your home location with number ---
+2020-06-23 02:16:02,117 INFO c.s.c.c.Ride [main]  --- Enter your destination with numbers ---
+2020-06-23 02:16:05,757 INFO c.s.c.c.Ride [main] - The mount is: $40
+2020-06-23 02:16:05,757 INFO c.s.c.c.Ride [main] 
+ How do you wanna use Credit or Debit? use C or D
+2020-06-23 02:16:12,363 INFO c.s.c.c.Ride [main] The Mount is: 52.0
+2020-06-23 02:17:04,883 INFO c.s.c.c.IUberInterface [main]  ---       UBER       ---
+2020-06-23 02:17:04,887 INFO c.s.c.c.Ride [main] Date: 2020-07-03 02:17:04
+2020-06-23 02:17:04,899 INFO c.s.c.c.Client [main]  ---       UBER       ---
+2020-06-23 02:17:04,899 DEBUG c.s.c.c.Client [main]  --- Please Register ---
+2020-06-23 02:17:04,900 DEBUG c.s.c.c.Client [main]  --- Enter your Name ---
+2020-06-23 02:17:06,437 DEBUG c.s.c.c.Client [main]  --- Enter a new ID number ---
+
+2020-06-23 02:17:07,609 DEBUG c.s.c.c.Client [main]  --- Enter email ---
+2020-06-23 02:17:08,421 DEBUG c.s.c.c.Client [main]  --- Enter contact number ---
+2020-06-23 02:17:09,837 INFO c.s.c.c.Ride [main]  --- RideStatus: Taxi available ---
+2020-06-23 02:17:09,839 DEBUG c.s.c.c.Driver [main] Creating drivers
+2020-06-23 02:17:09,839 DEBUG c.s.c.c.Driver [main] Lots of Drivers added
+2020-06-23 02:17:09,840 DEBUG c.s.c.c.Client [main]  --- Enter your home location with number ---
+2020-06-23 02:17:10,817 INFO c.s.c.c.Ride [main]  --- Enter your destination with numbers ---
+2020-06-23 02:17:11,650 INFO c.s.c.c.Ride [main] - The mount is: $40
+2020-06-23 02:17:11,650 INFO c.s.c.c.Ride [main] 
+ How do you wanna use Credit or Debit? use C or D
+2020-06-23 02:17:13,339 INFO c.s.c.c.Ride [main] The Mount is: 52.0

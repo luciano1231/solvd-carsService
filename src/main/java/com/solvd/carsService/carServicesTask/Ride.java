@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 import com.solvd.carsService.enumTask.RideStatus;
+import com.solvd.carsService.exceptions.ShortEmail;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -62,7 +64,7 @@ public class Ride {
 	}
 
 	// Create a new ride with a new client, also looks for the nearest driver
-	public static void newRide() {
+	public static void newRide() throws ShortEmail {
 
 		// Showing actual date
 		Calendar calendar = Calendar.getInstance();
@@ -74,8 +76,9 @@ public class Ride {
 		// Creating a new client
 		Client aClient = Client.newClient();
 
-		//ENUM current Ride status
-		RideStatus status = RideStatus.NOTHING;
+		// ENUM current Ride status
+		RideStatus status = RideStatus.AVAILABLE;
+		LOGGER.info(" --- RideStatus: " + status.getSt() + " ---");
 
 		Scanner myScanner = new Scanner(System.in);
 
@@ -85,23 +88,21 @@ public class Ride {
 
 		// Looking for the nearest Driver
 		int homeLocation = aClient.getHomeLocation();
-		//driver.nearDriver(drivers, homeLocation);
+		// driver.nearDriver(drivers, homeLocation);
 
 		LOGGER.info(" --- Enter your destination with numbers ---");
 		int userDestination = myScanner.nextInt();
 
 		myScanner.nextLine();
 
-		LOGGER.info("- The mount is: $" + userDestination);
-
 		int finalAmount = Math.abs(userDestination - homeLocation);
 
 		LOGGER.info("- The mount is: $" + finalAmount);
 
 		String response = "Yes";
-		LOGGER.info("\n How do you wanna use Credit or Debit? use C or D\n");
+		LOGGER.info("\n How do you wanna use Credit or Debit? use C or D");
 		response = myScanner.next();
-		myScanner.next();
+		myScanner.nextLine();
 
 		if (response.equals("D")) {
 			Debit newDebit = new Debit("Debit", finalAmount);
@@ -110,6 +111,9 @@ public class Ride {
 			CreditCard newCredit = new CreditCard("Credit", finalAmount);
 			LOGGER.info("The Mount is: " + newCredit.calculate(finalAmount));
 		}
+
+		status = RideStatus.WAITING;
+		LOGGER.info(status);
 
 	}
 

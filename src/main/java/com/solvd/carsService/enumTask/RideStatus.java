@@ -2,7 +2,8 @@ package com.solvd.carsService.enumTask;
 
 public enum RideStatus {
 		NOTHING ("No current trip"),
-		WAITING("Waiting for the driver"),
+		AVAILABLE ("Taxi available"),
+		WAITING("Please Wait for your driver"),
 		FINISHED("Arrived to destination");
 
 		private String st;

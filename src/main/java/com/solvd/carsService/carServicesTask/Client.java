@@ -3,6 +3,8 @@ package com.solvd.carsService.carServicesTask;
 import java.util.Scanner;
 
 import com.solvd.carsService.enumTask.UserAccesLevel;
+import com.solvd.carsService.exceptions.ShortEmail;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,7 +24,7 @@ public class Client extends User {
 		LOGGER.info("- The Driver is:" + this.getName());
 	}
 
-	public static Client newClient() {
+	public static Client newClient() throws ShortEmail { 
 		Scanner myEscaner = new Scanner(System.in);
 		LOGGER.info(" ---       UBER       ---");
 		LOGGER.debug(" --- Please Register ---");
@@ -35,6 +37,9 @@ public class Client extends User {
 
 		LOGGER.debug(" --- Enter email ---");
 		String userEmail = myEscaner.next();
+		if (userEmail.length()<=4) {// Using a customized Exception
+			throw new ShortEmail ("Mail too short");
+		}
 
 		LOGGER.debug(" --- Enter contact number ---");
 		int userContact = myEscaner.nextInt();
