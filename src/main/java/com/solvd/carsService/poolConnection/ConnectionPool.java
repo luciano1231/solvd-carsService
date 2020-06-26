@@ -4,8 +4,13 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ConnectionPool {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import com.solvd.carsService.jdbc.dao.ModelsDAO;
+
+public class ConnectionPool {
+	private final static Logger LOGGER = LogManager.getLogger(ModelsDAO.class);
 	private BlockingQueue<Connection> connectionsQueue;
 	private static ConnectionPool cnP;
 	private AtomicInteger cnCount = new AtomicInteger(0);
@@ -40,7 +45,7 @@ public class ConnectionPool {
 					
 					connectionsQueue.add(ConnectionImp.getInstance());
 					cnCount.incrementAndGet();
-					System.out.println(cnCount.get());	
+					LOGGER.info(cnCount.get());	
 					connection = connectionsQueue.take();
 					return connection;
 					

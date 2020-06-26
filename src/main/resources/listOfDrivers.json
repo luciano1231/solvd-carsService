@@ -1,0 +1,35 @@
+[
+	{
+		"person_id": 1,
+		"name": "Diego",
+		"licence": "2211555",
+		"birth_date": "29101999",
+		"sex_id": 1,
+		"country": {
+			"id": 1,
+			"name": "Lisboa"
+			}
+	},
+	{
+		"person_id": 2,
+		"name": "Jason",
+		"licence": "55995511",
+		"birth_date": "01011980",
+		"sex_id": 1,
+		"country": {
+			"id": 2,
+			"name": "Spain"
+			}
+	},
+	{
+		"person_id": 3,
+		"name": "Matias",
+		"licence": "22331144",
+		"birth_date": "18121988",
+		"sex_id": 2,
+		"country": {
+			"id": 3,
+			"name": "Argentina"
+			}
+	}
+]

@@ -30,32 +30,29 @@ FROM mydb.coverages cv
 HAVING cv.amount < 200
 ORDER BY details;
 
-SELECT *, avg(amount)
+SELECT *, avg(amount) "Total"
 FROM mydb.coverages cv
-HAVING COUNT(*) > 2 
+HAVING avg(amount) > 200 
 ORDER BY details;
-
-
 
 SELECT *
 FROM mydb.brands 
 ORDER BY description;
 
-SELECT *, count(*)
-FROM mydb.products
-HAVING (details) = "good"
+SELECT *, count(amount)
+FROM mydb.payments
+HAVING count(amount) > 100
 ORDER BY (id) DESC;
 
 SELECT co.name "Country",c.name "City"
 FROM mydb.cities c
 JOIN mydb.countries co
-ON c.id = co.cities_id
-HAVING (c.name) = "tokelau";
+ON c.id = co.cities_id;
 
 SHOW VARIABLES WHERE VARIABLE_NAME in("hostname", "port");
 
 SELECT * 
-from mydb.customers cu
+FROM mydb.customers cu
 INNER JOIN mydb.phones ph ON cu.id = ph.customers_id
 INNER JOIN mydb.request rq ON cu.id = rq.customers_id
 INNER JOIN mydb.employees em ON em.id = rq.employees_id

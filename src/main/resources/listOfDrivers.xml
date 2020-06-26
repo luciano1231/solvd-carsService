@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<driverList>
+	<driver id="1">
+		<name>Luciano</name>
+		<licence>5555222221</licence>
+		<birth_date>20101999</birth_date>
+		<sex_id>1</sex_id>
+		<country id="1">
+			<name>Argentinian</name>
+		</country>
+	</driver>
+	<driver id="2">
+		<name>Diego</name>
+		<licence>5115666894</licence>
+		<birth_date>05061970</birth_date>
+		<sex_id>1</sex_id>
+		<country id="2">
+			<name>Brazilian</name>
+		</country>
+	</driver>
+	<driver id="3">
+		<name>Samuel</name>
+		<licence>1110000254</licence>
+		<birth_date>15101989</birth_date>
+		<sex_id>2</sex_id>
+		<country id="3">
+			<name>Persian</name>
+		</country>
+	</driver>
+</driverList>

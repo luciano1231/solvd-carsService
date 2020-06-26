@@ -32,7 +32,7 @@ public class ModelsDAO implements JDBCInterface<ModelsDTO> {
 		try {
 
 			ps = cn.getCnn().prepareStatement(SQL_INSERT);
-			ps.setString(1, t.getId());
+			ps.setLong(1, t.getId());
 			ps.setString(2, t.getDescription());
 			if (ps.executeUpdate() > 0) {
 				return true;
@@ -74,7 +74,7 @@ public class ModelsDAO implements JDBCInterface<ModelsDTO> {
 
 			ps = cn.getCnn().prepareStatement(SQL_UPDATE);
 			ps.setString(1, t.getDescription());
-			ps.setString(2, t.getId());
+			ps.setLong(2, t.getId());
 			if (ps.executeUpdate() > 0) {
 				return true;
 			}
@@ -102,7 +102,7 @@ public class ModelsDAO implements JDBCInterface<ModelsDTO> {
 			res = ps.executeQuery();
 
 			while (res.next()) {
-				mod = new ModelsDTO(res.getString(1), res.getString(2));
+				mod = new ModelsDTO(res.getLong(1), res.getString(2));
 
 			}
 		} catch (SQLException e) {
@@ -127,7 +127,7 @@ public class ModelsDAO implements JDBCInterface<ModelsDTO> {
 			res = ps.executeQuery();
 
 			while (res.next()) {
-				models.add(new ModelsDTO(res.getString(1), res.getString(2)));
+				models.add(new ModelsDTO(res.getLong(1), res.getString(2)));
 			}
 
 		} catch (SQLException e) {
